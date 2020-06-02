@@ -1,0 +1,11 @@
+<!--templates/home.html-->
+<h1>Hello There</h1>
+
+<!--list view to be used in a list-->
+<ul>
+    
+    {% for post in object_list %}
+        <li>{{post.title}} | {{post.body}}</li>
+    {% endfor %}
+        
+</ul>
