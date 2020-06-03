@@ -1,11 +1,13 @@
 <!--templates/home.html-->
-<h1>Hello There</h1>
+
+{% extends 'base.html' %}
 
 <!--list view to be used in a list-->
 <ul>
-    
+    {% block content %}
     {% for post in object_list %}
         <li>{{post.title}} | {{post.body}}</li>
     {% endfor %}
+    {% endblock content %}
         
 </ul>
