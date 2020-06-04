@@ -6,7 +6,7 @@
 <ul>
     {% block content %}
     {% for post in object_list %}
-        <li>{{post.title}} | {{post.body}} | {{post.date}}</li>
+        <li style="list-style-type: none;"><h2>{{post.title}}</h2><h5>{{post.description}}</h5>  {{post.date|date:"M d Y"}}</li><br><br>
     {% endfor %}
     {% endblock content %}
         

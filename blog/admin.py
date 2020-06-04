@@ -14,7 +14,7 @@ When using class modeling, you must use a decorator. I've organized this PostAdm
 @admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     #list_display edits the way the fields are displayed
-    list_display = ('title', 'body')
+    list_display = ('title', 'description','body')
     #readonly_fields shows date objects
     readonly_fields = ('date',)
     #date_hierarcy is my sort order
