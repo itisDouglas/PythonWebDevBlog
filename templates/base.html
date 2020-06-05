@@ -10,31 +10,38 @@
 <header>
 
     <!--this is my header-->
+    <br>
     <div class="container">
-        <div class="row">
-            <div class="col-sm">
+        <div class="row row-cols-2">
+            <div class="col">
                 <h1>Python Web Developer Blog</h1>
             </div>
-        </div>
-    </div>
-
-    <!--my navbar-->
+            <div class="col">
+                <!--my navbar-->
     <ul class="nav nav-pills justify-content-end">
         <li class="nav-item">
-          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link " href="#">Home</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">About</a>
         </li>
         <!--searchbar here-->
+        {% csrf_token %}
         <form class="form-inline my-2 my-lg-0">
             <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
           </form>
-      </ul><br><br><br>
+      </ul><br><br><br><br><br>
     <!--end navbar-->
+            </div>
+        </div>
+    </div>
 </header>
 <body>
+    {%block tags%}
+
+    {%endblock%}
+
     {%block content%}
 
     {%endblock%}

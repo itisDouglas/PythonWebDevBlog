@@ -2,12 +2,35 @@
 
 {% extends 'base.html' %}
 
+<!--tags list view; each tag will trigger filtering by topic-->
+
+{%block tags%}
+<!--something here?-->
+
+{%endblock%}
+
 <!--list view to be used in a list-->
 <ul>
     {% block content %}
     {% for post in object_list %}
-        <li style="list-style-type: none;"><h2>{{post.title}}</h2><h5>{{post.description}}</h5>  {{post.date|date:"M d Y"}}</li><br><br>
+        <div class="mx-auto" style="width: 700px;">
+        <div class="card">
+            <li style="list-style-type: none;">
+                <div class="card-body">
+                    <h2>{{post.title}}</h2>
+                <p style="font-size: large;">{{post.description}}</p>{{post.date|date:"M d Y"}}
+            </li></div><br><br>
+                </div>
+                
+        </div>
     {% endfor %}
+
     {% endblock content %}
         
 </ul>
+
+<!--
+
+    Announcing the Django News Newsletter
+    The UDP Protocol
+-->

@@ -6,7 +6,7 @@ from .views import HomePageView, AboutView, PostView
 urlpatterns = [
     path('', HomePageView.as_view(), name = 'home'),
 
-    path('about/', AboutView.as_view(), name='about'),
+    path('about', AboutView.as_view(), name='about'),
     
     path('post', PostView.as_view(), name='post'),
     
