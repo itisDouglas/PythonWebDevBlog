@@ -14,5 +14,6 @@ class AboutView(TemplateView):
 
 
 #template view for post.html
-class PostView(TemplateView):
+class PostView(ListView):
+    model = Post
     template_name = "post.html"
