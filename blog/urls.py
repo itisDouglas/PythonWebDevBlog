@@ -5,9 +5,9 @@ from .views import HomePageView, AboutView, PostView
 
 urlpatterns = [
 
-    path('home/', HomePageView.as_view(), name = 'home'),
+    path('home', HomePageView.as_view(), name = 'home'),
 
-    path('about/', AboutView.as_view(), name='about'),
+    path('about', AboutView.as_view(), name='about'),
     
     path('post/<int:pk>', PostView.as_view(), name='post'),
 

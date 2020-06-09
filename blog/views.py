@@ -13,7 +13,7 @@ class AboutView(TemplateView):
     template_name = "about.html"
 
 
-#template view for post.html
+#detail view for post.html
 class PostView(DetailView):
     model = Post
     template_name = "post.html"
