@@ -1,6 +1,12 @@
 <!--templates/post.html-->
 {% extends 'base.html' %}
 {%block content%}
-<h1>Hello there</h1>
-<p>{{post.id}}</p>
+<div class="mx-auto" style="width: 700px;">
+<h1>{{post.title}}</h1>
+<h5>{{post.description}}</h5><br>
+<div class="card">
+<div class="card-body"><p>{{post.body}}</p></div></div><br>
+
+<p>{{post.date|date:"F j, Y"}}</p>
+</div>
 {%endblock%}

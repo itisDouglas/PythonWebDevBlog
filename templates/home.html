@@ -17,8 +17,8 @@
         <div class="card">
             <li style="list-style-type: none;">
                 <div class="card-body">
-                    <h2>{{post.title}}</h2>
-                <p style="font-size: large;">{{post.description}}</p>{{post.date|date:"M d Y"}}
+                    <h2><a href="{%url 'post' post.pk%}">{{post.title}}</a></h2>
+                <p style="font-size: large;">{{post.description}}</p>{{post.date|date:"F j, Y"}}
             </li></div><br><br>
                 </div>
                 
