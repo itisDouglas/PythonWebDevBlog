@@ -2,13 +2,6 @@
 
 {% extends 'base.html' %}
 
-<!--tags list view; each tag will trigger filtering by topic-->
-
-{%block tags%}
-<!--something here?-->
-
-{%endblock%}
-
 <!--list view to be used in a list-->
 <ul>
     {% block content %}
@@ -18,7 +11,7 @@
             <li style="list-style-type: none;">
                 <div class="card-body">
                     <h2><a href="{%url 'post' post.pk%}">{{post.title}}</a></h2>
-                <p style="font-size: large;">{{post.description}}</p>{{post.date|date:"F j, Y"}}
+                <p style="font-size: large;">{{post.description}}</p>Published {{post.date|date:"F j, Y"}}
             </li></div><br><br>
                 </div>
                 

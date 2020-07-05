@@ -8,7 +8,7 @@ from .models import Post
 #display title, post, date as fields in the admin page
 """PostAdmin configures the field display in my admin.
 
-When using class modeling, you must use a decorator. I've organized this PostAdmin to display the title and the body. Also, it include the date field and it's organized by date published.
+When using class modeling, you must use a decorator. I've organized this PostAdmin to display the title and the body. Also, it includes the date field and it's organized by date published.
 
 """
 @admin.register(Post)
