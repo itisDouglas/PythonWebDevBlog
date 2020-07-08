@@ -25,11 +25,6 @@ class AboutView(TemplateView):
 class PostView(DetailView):
     model = Post
     template_name = "post.html"
-
-    def get_queryset(self):
-        query = self.request.GET.get('q')
-        object_list = Post.objects.filter(body__contains=query)
-        return object_list
     
 
     
