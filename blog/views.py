@@ -37,7 +37,10 @@ class PostSearchResultsListView(ListView):
 
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Post.objects.filter(title__contains=query)
+        
+        object_list = Post.objects.filter(
+            Q(body__icontains=query) | Q(title__icontains=query)
+        )
         return object_list
 
 
