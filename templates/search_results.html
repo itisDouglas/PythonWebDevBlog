@@ -2,7 +2,10 @@
 {% extends 'base.html' %}
 
 {%block content%}
-{% for post in object_list %}
+
+<!--List of search results-->
+{%if post%}
+    {% for post in object_list %}
         <div class="mx-auto" style="width: 700px;">
         <div class="card">
             <li style="list-style-type: none;">
@@ -10,8 +13,16 @@
                     <h2><a href="{%url 'post' post.pk%}">{{post.title}}</a></h2>
                 <p style="font-size: large;">{{post.description}}</p>Published {{post.date|date:"F j, Y"}}
             </li></div><br><br>
-                </div>
-                
+                </div>            
         </div>
     {% endfor %}
+
+    {%else%}
+        <div class="no-results" style="text-align: center;">
+            <h3>Sorry, that doesn't exist!</h3>
+            <p>Try searching again.</p>
+        </div>
+
+{% endif %}
+
 {%endblock%}

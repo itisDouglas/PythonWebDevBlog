@@ -34,10 +34,9 @@ class PostSearchResultsListView(ListView):
     model = Post
     template_name = "search_results.html"
     
-
+    
     def get_queryset(self):
         query = self.request.GET.get('q')
-        
         object_list = Post.objects.filter(
             Q(body__icontains=query) | Q(title__icontains=query)
         )
