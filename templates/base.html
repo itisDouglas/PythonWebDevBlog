@@ -31,8 +31,7 @@
             <!--csrf_token uses a CSRF cookie based on random secret value. A hidden form field has a secret value with a salt that is added and scrambled to it. The salt is regenerated on every call to get_token() so the form field value is changed in EVERY response. This is done by the the below template tag.-->
             {% csrf_token %}
             <!--incoming requestes that aren't HTTP GET, HEAD, OPTIONS OR TRACE, CSRF cookie must be present and the 'csrfmiddlewaretoken' used must be present and correct, otherewise 403 error.-->
-            <input class="form-control mr-sm-2" name="q" type="text" placeholder="Search" 
-            aria-label="Search..">
+            <input class="form-control mr-sm-2" name="q" type="text">
             <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
           </form>
       </ul><br><br><br><br><br>

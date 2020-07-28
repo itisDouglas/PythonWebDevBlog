@@ -20,5 +20,5 @@ class PostAdmin(admin.ModelAdmin):
     #date_hierarcy is my sort order
     date_hierarchy = 'date'
     #search_fields adds a search box
-    #'title' specifies the field that will be searched
+    #'title' specifies the field that will be searched in the admin
     search_fields = ['title']

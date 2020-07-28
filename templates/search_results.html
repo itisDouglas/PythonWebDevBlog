@@ -1,8 +1,8 @@
 <!--templates/search_results.html-->
 {% extends 'base.html' %}
 
+<ul>
 {%block content%}
-
 <!--List of search results-->
 {%if post%}
     {% for post in object_list %}
@@ -16,13 +16,13 @@
                 </div>            
         </div>
     {% endfor %}
-
-    {%else%}
+{%else%}
         <div class="no-results" style="text-align: center;">
             <h3>Sorry, that doesn't exist!</h3>
             <p>Try searching again.</p>
         </div>
-
 {% endif %}
 
 {%endblock%}
+
+</ul>

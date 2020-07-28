@@ -1,7 +1,6 @@
 from django.shortcuts import render
 from django.views.generic import ListView, TemplateView, DetailView
 from django.db.models import Q
-from django.urls import reverse
 
 # Create your views here.
 from .models import Post
@@ -10,8 +9,6 @@ from .models import Post
 class HomePageView(ListView):
     model = Post
     template_name = "home.html"
-    paginate_by = 10
-    #queryset = Post.objects.filter(body__icontains="Test")
             
         
 
@@ -33,13 +30,10 @@ class PostView(DetailView):
 class PostSearchResultsListView(ListView):
     model = Post
     template_name = "search_results.html"
-    
-    
+
     def get_queryset(self):
         query = self.request.GET.get('q')
-        object_list = Post.objects.filter(
-            Q(body__icontains=query) | Q(title__icontains=query)
-        )
+        object_list = Post.objects.filter(Q(title__icontains=query))
         return object_list
 
 
